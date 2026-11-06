@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1>Oops Bot - Privacy Policy</h1>
-    <p><strong>Last updated:</strong> November 5, 2026</p>
+    <p><strong>Last updated:</strong> November 6, 2026</p>
 
     <p class="lead">Oops Bot: Tic Tac Toe is a game of tic-tac-toe against Oops, a small cartoon robot.
     <strong>The app itself collects nothing about you and sends nothing to us.</strong>
@@ -39,8 +39,8 @@
     </ul>
     <p>Because this data lives only on your device, <strong>deleting the app deletes it</strong>.
     It is not backed up to us and cannot be restored by us. If your device backs itself up
-    (for example to iCloud), Oops Bot's data may be included in that backup, which is governed
-    by Apple's privacy policy, not this one.</p>
+    (to iCloud on an iPhone, or with Android's backup to your Google account), Oops Bot's data may
+    be included in that backup, which is governed by Apple's or Google's privacy policy, not this one.</p>
 
     <h2>Information the app does not collect</h2>
     <p>The app does not collect, transmit or have access to:</p>
@@ -52,14 +52,15 @@
         <li>usage analytics or crash reports of our own. The app contains no analytics, telemetry
         or crash-reporting SDK (see Advertising below for what Google's ad SDK collects).</li>
     </ul>
-    <p>The app asks for no permissions at all: no location, camera, microphone, contacts, photos,
-    notifications or tracking. Vibration uses your iPhone's built-in haptics, which need no
-    permission. There is no chat, no sharing, no in-app purchase and no sound.</p>
+    <p>The app never asks you for a permission: no location, camera, microphone, contacts, photos,
+    notifications or tracking. Vibration uses your phone's built-in haptics, which need no prompt
+    (on Android it is an install-time permission; see Android below). There is no chat, no sharing,
+    no in-app purchase and no sound.</p>
 
     <h2>If you email us</h2>
     <p>The About section of the app's Settings has a <strong>Report an ad</strong> row. It opens your
-    own mail app with a draft addressed to us. The draft names the app, its version and your iOS
-    version, and nothing else. You can edit it before sending, or not send it at all.</p>
+    own mail app with a draft addressed to us. The draft names the app, its version and your iOS or
+    Android version, and nothing else. You can edit it before sending, or not send it at all.</p>
     <p>If you do email us, to report an ad or for support, we receive your email address and what
     you write. We use them only to reply to you and to look into the ad you reported (for example,
     to block it in our AdMob account). We don't add you to any mailing list and we don't share
@@ -69,7 +70,8 @@
     <p>Oops Bot is free and supported by <strong>one banner ad</strong> at the bottom of the screen,
     served by <strong>Google AdMob</strong>. There are never full-screen, pop-up, video or rewarded ads.</p>
     <p>To serve ads, Google's Mobile Ads SDK collects and processes certain information.
-    According to Google's own data disclosure for the iOS SDK, it may collect:</p>
+    According to Google's own data disclosure for the iOS SDK, it may collect the following (for
+    Android, see Android below):</p>
     <ul>
         <li>crash logs, which Google describes as not related to the user, and other diagnostic
         information, used to diagnose problems and improve the SDK, and possibly also for
@@ -138,8 +140,41 @@
     <a href="https://support.google.com/admob/answer/10105530">support.google.com/admob/answer/10105530</a></p>
 
     <h2>Android</h2>
-    <p>Oops Bot is currently available for iPhone only. If an Android version is released, this
-    policy will be updated to cover it before that release.</p>
+    <p>Oops Bot on Android works the same way: the same game, the same score and settings kept only
+    on your phone, the same one banner, and every ad request child-directed, rated G and
+    non-personalized.</p>
+    <ul>
+        <li><strong>What Google's ad SDK collects on Android.</strong> According to Google's data
+        disclosure for its Android Mobile Ads SDK, it collects and shares, for advertising, analytics
+        and fraud prevention: your device's IP address, which may be used to estimate its general
+        location; product interactions, such as app launches and taps; diagnostic information, such
+        as app launch time, hang rate and energy usage; and device identifiers. Google says all of it
+        is encrypted in transit. This is collected by Google, not by us.</li>
+        <li><strong>No advertising ID.</strong> The child-directed tag tells Google's SDK not to send
+        the Android advertising ID, and the app also removes the advertising-ID permission
+        (<code>com.google.android.gms.permission.AD_ID</code>) from its manifest, so Android gives it
+        an advertising ID of all zeros. Google's SDK can still use identifiers that aren't the
+        advertising ID, such as the app set ID and a rotating SDK instance ID, which Google lists
+        under device identifiers.</li>
+        <li><strong>Permissions it doesn't have.</strong> The app also removes Android's ad-services
+        permissions (<code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>
+        and <code>ACCESS_ADSERVICES_TOPICS</code>), so there are no Privacy Sandbox interest topics or
+        ad attribution, and it has no storage, overlay, location, camera, microphone, contacts or
+        notification permission.</li>
+        <li><strong>The permissions it has</strong> are install-time permissions that never show a
+        prompt: internet and network state (for the banner), vibration (for the haptics), and two
+        that Google's and Android's own libraries need to run in the background briefly (wake lock and
+        a foreground service).</li>
+        <li><strong>Backups.</strong> Android may include Oops Bot's score and settings in your
+        phone's own backup to your Google account, and restore them when you set up a new phone. That
+        backup is governed by Google's privacy policy, not this one. We never receive it.</li>
+        <li><strong>Report an ad</strong> opens your mail app with a draft that names your Android
+        version, as described under "If you email us".</li>
+    </ul>
+    <p>Google's data disclosure for its Android Mobile Ads SDK:
+    <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">developers.google.com/admob/android/privacy/play-data-disclosure</a><br>
+    Google's description of the child-directed setting on Android:
+    <a href="https://developers.google.com/admob/android/targeting">developers.google.com/admob/android/targeting</a></p>
 
     <h2>Children</h2>
     <p>Oops Bot is a general-audience game, and families often play it together. Because a younger
