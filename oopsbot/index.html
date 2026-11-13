@@ -8,6 +8,7 @@
         body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; max-width: 760px; color: #26233F; }
         h1 { color: #3F46C8; }
         h2 { color: #3F46C8; margin-top: 32px; font-size: 1.25em; }
+        h3 { margin-top: 20px; font-size: 1.05em; }
         a { color: #3F46C8; }
         .lead { background: #ECEAFB; border-left: 4px solid #3F46C8; padding: 12px 16px; }
         @media (max-width: 600px) { body { margin: 20px; } }
@@ -15,20 +16,26 @@
 </head>
 <body>
     <h1>Oops Bot - Privacy Policy</h1>
-    <p><strong>Last updated:</strong> November 6, 2026</p>
+    <p><strong>Last updated:</strong> November 12, 2026</p>
 
     <p class="lead">Oops Bot: Tic Tac Toe is a game of tic-tac-toe against Oops, a small cartoon robot.
     <strong>The app itself collects nothing about you and sends nothing to us.</strong>
     It has no account and no server, and the game works offline. The only third party involved is
-    Google, which serves the one banner ad at the bottom of the screen. Every ad request is tagged as
-    child-directed, rated G and non-personalized, and the app does not track you.</p>
+    Google, which serves the one banner ad at the bottom of the screen. In versions before 1.2.0 (iPhone 1.0.0 and
+    1.1.0, Android 1.0.0) every ad request is tagged as child-directed, rated G and non-personalized, and the app does not
+    track you. From version 1.2.0, if you allow it, the ad can match your interests; if you don't, or where the law
+    asks first, it doesn't. The game is the same either way. The Apple Watch app has no ads and no tracking.</p>
+    <p>This page covers every version. Where something changed in 1.2.0, the section says which version it describes.
+    Your version is shown at the end of the app's Settings, under About.</p>
 
     <h2>Information the app stores</h2>
     <p>Oops Bot keeps two small records, <strong>only on your own device</strong>:</p>
     <ul>
         <li>your score: your wins, Oops's wins, draws, your current streak and your best streak</li>
         <li>your settings: whether you play as X or O, who starts, whether "Oops tries harder" is on,
-        whether Vibration is on, and (for "Take turns") who started the last game</li>
+        whether Vibration is on, and (for "Take turns") who started the last game. From version 1.2.0 on phones it also holds
+        who plays with you (Oops or a friend) and your Sound level (Off, Soft or Loud), and on iPhone one yes-or-no
+        note: whether the app has already asked Apple's tracking question, so it never asks twice. Your answer itself is kept by iOS, not by the app.</li>
     </ul>
     <p>A game in progress is not saved.</p>
     <ul>
@@ -52,10 +59,12 @@
         <li>usage analytics or crash reports of our own. The app contains no analytics, telemetry
         or crash-reporting SDK (see Advertising below for what Google's ad SDK collects).</li>
     </ul>
-    <p>The app never asks you for a permission: no location, camera, microphone, contacts, photos,
-    notifications or tracking. Vibration uses your phone's built-in haptics, which need no prompt
+    <p>The app never asks you for a permission: no location, camera, microphone, contacts, photos or notifications.
+    Versions before 1.2.0 never ask about tracking either; from 1.2.0 the iPhone app asks Apple's tracking question once,
+    after you have played a bit (see Tracking below). Vibration uses your phone's built-in haptics, which need no prompt
     (on Android it is an install-time permission; see Android below). There is no chat, no sharing,
-    no in-app purchase and no sound.</p>
+    no in-app purchase. Versions before 1.2.0 have no sound. From 1.2.0 the game's sound effects are files inside the app:
+    it plays them through your speaker or headphones, and it never records or listens.</p>
 
     <h2>If you email us</h2>
     <p>The About section of the app's Settings has a <strong>Report an ad</strong> row. It opens your
@@ -68,7 +77,12 @@
 
     <h2>Advertising</h2>
     <p>Oops Bot is free and supported by <strong>one banner ad</strong> at the bottom of the screen,
-    served by <strong>Google AdMob</strong>. There are never full-screen, pop-up, video or rewarded ads.</p>
+    served by <strong>Google AdMob</strong>. The banner never covers the board. Versions before 1.2.0 show only the banner:
+    no full-screen, pop-up, video or rewarded ad of any kind.</p>
+    <p>From version 1.2.0 on phones you can also choose to watch <strong>one optional video ad</strong>: it plays only when you tap the
+    "Watch to hide ads" button under the board, never on its own. It is served by Google AdMob too, under the same consent and
+    personalization rule as the banner. Watching it to the end hides the banner until you close the app. Nothing about it is stored by
+    Oops Bot, and it adds no data to the lists below.</p>
     <p>To serve ads, Google's Mobile Ads SDK collects and processes certain information.
     According to Google's own data disclosure for the iOS SDK, it may collect the following (for
     Android, see Android below):</p>
@@ -79,7 +93,7 @@
         <li>performance data, such as app launch time, hang rate or energy usage, which Google
         describes as user-associated</li>
         <li>a device ID: the device's advertising identifier or another identifier limited to the
-        app or developer (see Tracking below for why it is not the advertising identifier in Oops Bot)</li>
+        app or developer (see Tracking below for when it is the advertising identifier)</li>
         <li>advertising data, such as the ads you have seen</li>
         <li>coarse location, derived from your IP address (the app never asks for location access,
         so Google gets no location from your device's Location Services)</li>
@@ -95,6 +109,19 @@
     <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
 
     <h2>How the ads are set up</h2>
+    <h3>Version 1.2.0 and later</h3>
+    <ul>
+        <li><strong>Personalized only if you allow it.</strong> Every banner request asks for non-personalized ads
+        until the choice that applies to you says otherwise: on iPhone, until you allow tracking in Apple's question;
+        in the EEA, the UK and Switzerland, until you consent to personalized ads in Google's form; on Android elsewhere,
+        personalized ads can be shown. Google says non-personalized ads "are not based on a user's past behavior" and use
+        context instead, such as a coarse, city-level location, and that they "still use cookies or mobile ad
+        identifiers for frequency capping and aggregated ad reporting".</li>
+        <li><strong>Rated G.</strong> The maximum ad content rating is G, for general audiences.</li>
+        <li><strong>For people 13 and older.</strong> Oops Bot is built for adults and teenagers. The ads are no longer
+        treated as child-directed.</li>
+    </ul>
+    <h3>Versions before 1.2.0 (iPhone 1.0.0 and 1.1.0, Android 1.0.0)</h3>
     <ul>
         <li><strong>Child-directed.</strong> Every ad request is tagged for child-directed treatment
         under the US Children's Online Privacy Protection Act (COPPA). Google says that for such
@@ -108,18 +135,32 @@
         the same ad, and counting how often ads are shown and tapped.</li>
         <li><strong>Rated G.</strong> The maximum ad content rating is G, for general audiences.</li>
     </ul>
-    <p><strong>What these settings don't change:</strong> Google's SDK still collects the kinds of
-    data listed under Advertising, to deliver the ad, measure it and keep it working. Google's
-    disclosure does not describe less collection for child-directed requests, so we don't claim it.</p>
-    <p>Google's description of these settings:
+    <p><strong>What these settings don't change:</strong> in every version, Google's SDK collects the kinds of
+    data listed under Advertising, to deliver the ad, measure it and keep it working. For the child-directed
+    requests of the earlier versions, Google's disclosure does not describe less collection, so we don't claim it.</p>
+    <p>Google's description:
     <a href="https://developers.google.com/admob/ios/targeting">developers.google.com/admob/ios/targeting</a> and
     <a href="https://support.google.com/admob/answer/7676680">support.google.com/admob/answer/7676680</a></p>
 
     <h2>Tracking (iOS)</h2>
-    <p><strong>Oops Bot does not track you</strong>, so it never shows Apple's App Tracking
+    <h3>Version 1.2.0 and later</h3>
+    <p><strong>On iPhone, Oops Bot asks Apple's question once.</strong> It never asks when you open the app. After you have won a
+    game or finished two, the next time you tap New game, the app shows one screen from Oops that explains the banner and has one
+    button, Continue. Continue shows Apple's "Allow Oops Bot to track your activity across other companies' apps and websites?"
+    question. Either answer is fine, and the game is the same.</p>
+    <ul>
+        <li><strong>Allow:</strong> the banner can use your device's advertising identifier (IDFA) to show ads that match your interests.</li>
+        <li><strong>Ask App Not to Track:</strong> the banner stays non-personalized and gets an advertising identifier of all zeros.
+        You can change your mind in iOS Settings, Privacy &amp; Security, Tracking.</li>
+        <li>The app records only that it has asked, on your device, so the screen never comes back. We don't see your answer.</li>
+        <li>We don't combine anything from the app with other companies' data, and we share nothing with data brokers.
+        Google, as the ad provider, may use the identifier as it describes in its own policy.</li>
+    </ul>
+    <h3>Versions before 1.2.0 (iPhone 1.0.0 and 1.1.0)</h3>
+    <p><strong>These versions of Oops Bot do not track you</strong>, so they never show Apple's App Tracking
     Transparency prompt.</p>
     <ul>
-        <li>The app never asks for permission to track. Apple's documentation says that on iOS 14.5
+        <li>They never ask for permission to track. Apple's documentation says that on iOS 14.5
         and later, an app that hasn't requested tracking authorization gets an advertising
         identifier (IDFA) of all zeros.</li>
         <li>The child-directed tag tells Google's SDK not to send the IDFA, and turns off
@@ -129,6 +170,13 @@
     </ul>
 
     <h2>The EEA, the UK and Switzerland</h2>
+    <h3>Version 1.2.0 and later</h3>
+    <p>On your first launch Google's consent form appears over the loading screen, before any ad is requested. You can allow or
+    refuse personalized ads and manage the details. If you refuse, the banner still shows, with non-personalized ads, and the app
+    never shows the tracking screen above. Where Google asks for it, <strong>Settings, About, Privacy choices</strong> opens Google's
+    privacy options so you can change your mind at any time. If the form can't be shown (for example, no connection on a first launch),
+    the app shows no ads that session. In some US states Google offers the same Privacy choices row for its own opt-out.</p>
+    <h3>Versions before 1.2.0 (iPhone 1.0.0 and 1.1.0, Android 1.0.0)</h3>
     <p>The app shows no consent form. For ad requests from the European Economic Area, the UK and
     Switzerland that carry no consent signal from a Google-certified consent platform, Google serves
     only "Limited Ads". Google says Limited Ads "disable the collection, sharing, and use of personal
@@ -140,9 +188,9 @@
     <a href="https://support.google.com/admob/answer/10105530">support.google.com/admob/answer/10105530</a></p>
 
     <h2>Android</h2>
-    <p>Oops Bot on Android works the same way: the same game, the same score and settings kept only
-    on your phone, the same one banner, and every ad request child-directed, rated G and
-    non-personalized.</p>
+    <p>Oops Bot on Android works the same way as the iPhone app: the same game, the same score and settings kept only on your phone,
+    and the same one banner. This section describes version 1.2.0 and later. Android version 1.0.0 (before 1.2.0) tagged every ad
+    request as child-directed and non-personalized and did not use the advertising ID.</p>
     <ul>
         <li><strong>What Google's ad SDK collects on Android.</strong> According to Google's data
         disclosure for its Android Mobile Ads SDK, it collects and shares, for advertising, analytics
@@ -150,21 +198,15 @@
         location; product interactions, such as app launches and taps; diagnostic information, such
         as app launch time, hang rate and energy usage; and device identifiers. Google says all of it
         is encrypted in transit. This is collected by Google, not by us.</li>
-        <li><strong>No advertising ID.</strong> The child-directed tag tells Google's SDK not to send
-        the Android advertising ID, and the app also removes the advertising-ID permission
-        (<code>com.google.android.gms.permission.AD_ID</code>) from its manifest, so Android gives it
-        an advertising ID of all zeros. Google's SDK can still use identifiers that aren't the
-        advertising ID, such as the app set ID and a rotating SDK instance ID, which Google lists
-        under device identifiers.</li>
-        <li><strong>Permissions it doesn't have.</strong> The app also removes Android's ad-services
-        permissions (<code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>
-        and <code>ACCESS_ADSERVICES_TOPICS</code>), so there are no Privacy Sandbox interest topics or
-        ad attribution, and it has no storage, overlay, location, camera, microphone, contacts or
-        notification permission.</li>
+        <li><strong>The advertising ID.</strong> Outside the EEA, the UK and Switzerland, the app uses Android's advertising ID
+        (the <code>com.google.android.gms.permission.AD_ID</code> permission) so the banner can match your interests. You can reset it or
+        opt out of ad personalization in Android Settings, under Privacy, Ads. In the EEA, the UK and Switzerland, Google's consent form decides.</li>
+        <li><strong>Permissions it doesn't have.</strong> The app removes Android's ad-services permissions
+        (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION and ACCESS_ADSERVICES_TOPICS), and it has no storage, overlay,
+        location, camera, microphone, contacts or notification permission.</li>
         <li><strong>The permissions it has</strong> are install-time permissions that never show a
-        prompt: internet and network state (for the banner), vibration (for the haptics), and two
-        that Google's and Android's own libraries need to run in the background briefly (wake lock and
-        a foreground service).</li>
+        prompt: internet and network state (for the banner), the advertising ID, vibration (for the haptics), and two
+        that Google's and Android's own libraries need to run in the background briefly (wake lock and a foreground service).</li>
         <li><strong>Backups.</strong> Android may include Oops Bot's score and settings in your
         phone's own backup to your Google account, and restore them when you set up a new phone. That
         backup is governed by Google's privacy policy, not this one. We never receive it.</li>
@@ -172,16 +214,15 @@
         version, as described under "If you email us".</li>
     </ul>
     <p>Google's data disclosure for its Android Mobile Ads SDK:
-    <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">developers.google.com/admob/android/privacy/play-data-disclosure</a><br>
-    Google's description of the child-directed setting on Android:
-    <a href="https://developers.google.com/admob/android/targeting">developers.google.com/admob/android/targeting</a></p>
+    <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">developers.google.com/admob/android/privacy/play-data-disclosure</a></p>
 
     <h2>Children</h2>
-    <p>Oops Bot is a general-audience game, and families often play it together. Because a younger
-    player may be holding the phone, every ad request is treated as child-directed (see "How the ads
-    are set up"). The app has no accounts, chat, sharing or sign-up, it never asks anyone for personal
-    information, and we do not knowingly collect personal information from children. If you think a
-    child has emailed us personal information, write to us and we will delete it.</p>
+    <p>From version 1.2.0, Oops Bot is a game for people 13 and older. Families may still play it together, and a parent can sit beside a
+    younger player, but the ads are not treated as child-directed, and the app is not meant to be used by children under 13 on their own.
+    Before 1.2.0 it was a general-audience game that families often played together, and because a younger player might be holding the
+    phone, every ad request was treated as child-directed (see "How the ads are set up"). In every version the app has no
+    accounts, chat, sharing or sign-up, it never asks anyone for personal information, and we do not knowingly collect personal
+    information from children. If you think a child has emailed us personal information, write to us and we will delete it.</p>
 
     <h2>Your rights</h2>
     <ul>
@@ -198,7 +239,7 @@
     will be reflected in an app update.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this policy: <a href="mailto:julia.gatina.ca@gmail.com">julia.gatina.ca@gmail.com</a><br>
+    <p>Questions about this policy: <a href="mailto:binary.force.ca@gmail.com">binary.force.ca@gmail.com</a><br>
     Help with the app: <a href="support.html">support and FAQ</a><br>
     Terms of use: <a href="terms.html">Terms of Service</a></p>
 </body>
